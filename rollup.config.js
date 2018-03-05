@@ -1,4 +1,4 @@
-import license from 'rollup-plugin-license';
+import NodeLicense from 'rollup-plugin-node-license';
 import resolve from 'rollup-plugin-node-resolve';
 
 import pkg from './package.json';
@@ -13,6 +13,6 @@ export default {
   },
   plugins: [
     resolve(),
-    license({ thirdParty: { output: 'dependencies.txt' } }),
+    new NodeLicense(),
   ],
 };
