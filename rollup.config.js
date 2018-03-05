@@ -6,10 +6,10 @@ import pkg from './package.json';
 export default {
   input: 'index.js',
   external: ['fs'],
-  interop: false,
   output: {
     file: pkg.main,
     format: 'cjs',
+    interop: false,
   },
   plugins: [
     resolve(),
